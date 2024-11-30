@@ -1,0 +1,122 @@
+:root {
+  --primary-color: #007bff;
+  --white-color: #fff;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+}
+header {
+  background-color: var(--primary-color);
+  /* color: white; */
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 5px;
+  background-color: var(--white-color);
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  list-style: none;
+}
+.nav-links a {
+  /* color: var(--white-color); */
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-links .navbar-nav a:hover {
+  text-decoration: underline;
+}
+/* Adding back-to-top button */
+#backTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  display: none;
+}
+.post {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: var(--white-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.post h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+.post p {
+  color: #666;
+  line-height: 1.6;
+}
+/* .post .btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+} */
+/* .post .btn-primary:hover {
+  background-color: #0056b3;
+} */
+.sidebar {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.sidebar h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+.sidebar ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+footer {
+  color: var(--white-color);
+  background-color: #212529;
+  .contact-us {
+    padding: 40px 20px 0;
+  }
+}
+footer p.copyright {
+  background-color: #343a40;
+  color: var(--white-color);
+  text-align: center;
+  padding-block: 10px;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
